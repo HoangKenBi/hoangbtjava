@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane fx:controller="javafx.Controller" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="624.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextField fx:id="txtFullName" layoutX="209.0" layoutY="91.0" promptText="Nguyễn Văn A">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtEmail" layoutX="209.0" layoutY="142.0" promptText="abc@gmail.cm">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtAge" layoutX="209.0" layoutY="201.0" promptText="18">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtAddress" layoutX="209.0" layoutY="261.0" promptText="Hà Nội">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <Text layoutX="122.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Họ tên " />
+      <Text layoutX="121.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" />
+      <Text layoutX="121.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tuổi" />
+      <Text layoutX="117.0" layoutY="285.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Địa chỉ" />
+      <Button onAction="#handleSubmit" layoutX="255.0" layoutY="326.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="78.0" text="Gửi" textFill="#1e1d1d">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+      <TextArea layoutX="43.0" layoutY="406.0" prefHeight="200.0" prefWidth="514.0" />
+      <Text layoutX="191.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NHẬP THÔNG TIN">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Text>
+      <Text fx:id="txtfullname" layoutX="121.0" layoutY="481.0" strokeType="OUTSIDE" strokeWidth="0.0" text="text" />
+      <Text fx:id="txtemail" layoutX="120.0" layoutY="512.0" strokeType="OUTSIDE" strokeWidth="0.0" text="text" />
+      <Text fx:id="txtage" layoutX="122.0" layoutY="542.0" strokeType="OUTSIDE" strokeWidth="0.0" text="text" />
+      <Text fx:id="txtaddress" layoutX="121.0" layoutY="569.0" strokeType="OUTSIDE" strokeWidth="0.0" text="text" />
+   </children>
+</Pane>
