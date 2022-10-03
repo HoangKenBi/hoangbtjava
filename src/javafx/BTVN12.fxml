@@ -43,9 +43,9 @@
             <Font name="System Bold" size="25.0" />
          </font>
       </Text>
-      <Text fx:id="txtfullname" layoutX="121.0" layoutY="481.0" strokeType="OUTSIDE" strokeWidth="0.0" text="text" />
-      <Text fx:id="txtemail" layoutX="120.0" layoutY="512.0" strokeType="OUTSIDE" strokeWidth="0.0" text="text" />
-      <Text fx:id="txtage" layoutX="122.0" layoutY="542.0" strokeType="OUTSIDE" strokeWidth="0.0" text="text" />
-      <Text fx:id="txtaddress" layoutX="121.0" layoutY="569.0" strokeType="OUTSIDE" strokeWidth="0.0" text="text" />
+      <Text fx:id="fullname" layoutX="121.0" layoutY="481.0" strokeType="OUTSIDE" strokeWidth="0.0" text="text" />
+      <Text fx:id="email" layoutX="120.0" layoutY="512.0" strokeType="OUTSIDE" strokeWidth="0.0" text="text" />
+      <Text fx:id="age" layoutX="122.0" layoutY="542.0" strokeType="OUTSIDE" strokeWidth="0.0" text="text" />
+      <Text fx:id="address" layoutX="121.0" layoutY="569.0" strokeType="OUTSIDE" strokeWidth="0.0" text="text" />
    </children>
 </Pane>

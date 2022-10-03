@@ -5,24 +5,25 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="624.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+
+<Pane fx:controller="javafx.Controller" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="624.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <TextField layoutX="209.0" layoutY="91.0" promptText="Nguyễn Văn A">
+      <TextField fx:id="txtFullName" layoutX="209.0" layoutY="91.0" promptText="Nguyễn Văn A">
          <font>
             <Font size="16.0" />
          </font>
       </TextField>
-      <TextField layoutX="209.0" layoutY="142.0" promptText="abc@gmail.cm">
+      <TextField fx:id="txtEmail" layoutX="209.0" layoutY="142.0" promptText="abc@gmail.cm">
          <font>
             <Font size="16.0" />
          </font>
       </TextField>
-      <TextField layoutX="209.0" layoutY="201.0" promptText="18">
+      <TextField fx:id="txtAge" layoutX="209.0" layoutY="201.0" promptText="18">
          <font>
             <Font size="16.0" />
          </font>
       </TextField>
-      <TextField layoutX="209.0" layoutY="261.0" promptText="Hà Nội">
+      <TextField fx:id="txtAddress" layoutX="209.0" layoutY="261.0" promptText="Hà Nội">
          <font>
             <Font size="16.0" />
          </font>
@@ -31,7 +32,7 @@
       <Text layoutX="121.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" />
       <Text layoutX="121.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tuổi" />
       <Text layoutX="117.0" layoutY="285.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Địa chỉ" />
-      <Button layoutX="255.0" layoutY="326.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="78.0" text="Gửi" textFill="#1e1d1d">
+      <Button onAction="#handleSubmit" layoutX="255.0" layoutY="326.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="78.0" text="Gửi" textFill="#1e1d1d">
          <font>
             <Font size="19.0" />
          </font>
@@ -42,9 +43,9 @@
             <Font name="System Bold" size="25.0" />
          </font>
       </Text>
-      <Text layoutX="121.0" layoutY="481.0" strokeType="OUTSIDE" strokeWidth="0.0" text="text" />
-      <Text layoutX="120.0" layoutY="512.0" strokeType="OUTSIDE" strokeWidth="0.0" text="text" />
-      <Text layoutX="122.0" layoutY="542.0" strokeType="OUTSIDE" strokeWidth="0.0" text="text" />
-      <Text layoutX="121.0" layoutY="569.0" strokeType="OUTSIDE" strokeWidth="0.0" text="text" />
+      <Text fx:id="fullname" layoutX="121.0" layoutY="481.0" strokeType="OUTSIDE" strokeWidth="0.0" text="text" />
+      <Text fx:id="email" layoutX="120.0" layoutY="512.0" strokeType="OUTSIDE" strokeWidth="0.0" text="text" />
+      <Text fx:id="age" layoutX="122.0" layoutY="542.0" strokeType="OUTSIDE" strokeWidth="0.0" text="text" />
+      <Text fx:id="address" layoutX="121.0" layoutY="569.0" strokeType="OUTSIDE" strokeWidth="0.0" text="text" />
    </children>
 </Pane>
