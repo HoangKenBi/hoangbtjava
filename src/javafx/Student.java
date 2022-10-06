@@ -1,15 +1,14 @@
 package javafx;
 
-public class FormSv {
-
+public class Student {
     String name;
     String email;
-    String point;
+    Integer mark;
 
-    public FormSv(String name, String email, String point) {
+    public Student(String name, String email, Integer mark) {
         this.name = name;
         this.email = email;
-        this.point = point;
+        this.mark = mark;
     }
 
     public String getName() {
@@ -28,16 +27,17 @@ public class FormSv {
         this.email = email;
     }
 
-    public String getPoint() {
-        return point;
+    public Integer getMark() {
+        return mark;
     }
 
-    public void setPoint(String point) {
-        this.point = point;
+    public void setMark(Integer mark) {
+        this.mark = mark;
     }
 
-    public String toString(){
-        return getName()+" - " +getEmail()+" - " +getPoint()+"\n" ;
-
+    @Override
+    public String toString() {
+        return getName()+"-"+getEmail()+"-"+getMark();
     }
 }
+
