@@ -1,19 +1,15 @@
-package multipage.form;
+package multipage;
 
-import multipage.list.Controller;
-
-public class Subjects extends Controller {
-
+public class Subject {
     String code;
     String name;
-    String hours;
+    Integer hours;
 
-    public Subjects(String code, String name, String hours) {
+    public Subject(String code, String name, Integer hours) {
         this.code = code;
         this.name = name;
         this.hours = hours;
     }
-
 
     public String getCode() {
         return code;
@@ -31,11 +27,11 @@ public class Subjects extends Controller {
         this.name = name;
     }
 
-    public String getHours() {
+    public Integer getHours() {
         return hours;
     }
 
-    public void setHours(String hours) {
+    public void setHours(Integer hours) {
         this.hours = hours;
     }
 
@@ -43,6 +39,4 @@ public class Subjects extends Controller {
     public String toString() {
         return getCode()+"-"+getName()+"-"+getHours();
     }
-
-
 }
