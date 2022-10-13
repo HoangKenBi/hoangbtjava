@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane fx:controller="BTVNJP2.Home.Controller" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text fill="#160fe4" layoutX="262.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SÁCH">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <Button onAction="#goToQLS" layoutX="226.0" layoutY="138.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="148.0" text="Quản lý sách" />
+      <Button onAction="#goToQLTV" layoutX="226.0" layoutY="209.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="148.0" text="Quản lý thành viên" />
+      <Button onAction="#goToQLMS" layoutX="226.0" layoutY="276.0" mnemonicParsing="false" text="Quản lý mượn sách" />
+   </children>
+</Pane>

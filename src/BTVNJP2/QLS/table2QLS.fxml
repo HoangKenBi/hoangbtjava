@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:controller="BTVNJP2.QLS.Controller" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text fill="#1c11e8" layoutX="207.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Quản lý sách ">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <TableView layoutX="299.0" layoutY="64.0" prefHeight="312.0" prefWidth="272.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="C1" />
+          <TableColumn prefWidth="75.0" text="C2" />
+        </columns>
+      </TableView>
+      <TextField layoutX="35.0" layoutY="91.0" promptText="Nhập mã sách" />
+      <TextField layoutX="35.0" layoutY="169.0" promptText="Nhập tên sách" />
+      <Button layoutX="99.0" layoutY="241.0" mnemonicParsing="false" text="Thêm" />
+      <Text fill="#e80d0d" layoutX="35.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
+      <Button onAction="#backToHome" layoutX="16.0" layoutY="18.0" mnemonicParsing="false" text="Back" />
+      <Button onAction="#goToQLTV" layoutX="521.0" layoutY="18.0" mnemonicParsing="false" text="Next" />
+   </children>
+</Pane>
