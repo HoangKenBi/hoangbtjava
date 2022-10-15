@@ -20,7 +20,7 @@ public class StudenController implements Initializable {
     public TableColumn<Student, Integer> tbIdSd;
     public TableColumn<Student, String> tbNameSd;
     public TableColumn<Student, String> tbEmail;
-    public TableColumn<Student, Integer> tbTel;
+    public TableColumn<Student, String> tbTel;
 
     public final static String connectionString = "jdbc:mysql://localhost:3306/t2203e";
     public final static String user = "root";
@@ -31,7 +31,7 @@ public class StudenController implements Initializable {
         tbIdSd.setCellValueFactory(new PropertyValueFactory<Student,Integer>("idsd"));
         tbNameSd.setCellValueFactory(new PropertyValueFactory<Student,String>("namesd"));
         tbEmail.setCellValueFactory(new PropertyValueFactory<Student,String>("email"));
-        tbTel.setCellValueFactory(new PropertyValueFactory<Student,Integer>("tel"));
+        tbTel.setCellValueFactory(new PropertyValueFactory<Student,String>("tel"));
 
         ObservableList<Student> lt = FXCollections.observableArrayList();
 
@@ -45,7 +45,7 @@ public class StudenController implements Initializable {
                 int id = rs.getInt("idsd");
                 String name = rs.getString("namesd");
                 String email = rs.getString("email");
-                int tel = rs.getInt("tel");
+                String tel = rs.getString("tel");
                 Student s = new Student(id,name,email,tel);
                 lt.add(s);
             }

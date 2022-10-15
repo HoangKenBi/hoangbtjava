@@ -4,12 +4,12 @@ public class Student {
     Integer idsd;
     String namesd;
     String email;
-    Integer tel;
+    String tel;
 
     public Student() {
     }
 
-    public Student(Integer idsd, String namesd, String email, Integer tel) {
+    public Student(Integer idsd, String namesd, String email, String tel) {
         this.idsd = idsd;
         this.namesd = namesd;
         this.email = email;
@@ -40,11 +40,11 @@ public class Student {
         this.email = email;
     }
 
-    public Integer getTel() {
+    public String getTel() {
         return tel;
     }
 
-    public void setTel(Integer tel) {
+    public void setTel(String tel) {
         this.tel = tel;
     }
 }
