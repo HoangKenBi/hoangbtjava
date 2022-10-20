@@ -2,10 +2,16 @@ package library.student.list;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import library.Main;
+import library.helpersd.Connector_sd;
 import library.info.Student;
 
 import java.net.URL;
@@ -21,10 +27,12 @@ public class StudenController implements Initializable {
     public TableColumn<Student, String> tbNameSd;
     public TableColumn<Student, String> tbEmail;
     public TableColumn<Student, String> tbTel;
-
+/*
     public final static String connectionString = "jdbc:mysql://localhost:3306/t2203e";
     public final static String user = "root";
     public final static String pwd = ""; // nếu là xampp: "", mamp:"root"
+
+ */
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -35,24 +43,40 @@ public class StudenController implements Initializable {
 
         ObservableList<Student> lt = FXCollections.observableArrayList();
 
-        try{
-            Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection(connectionString,user,pwd);
-            Statement statement = con.createStatement();
-            String sql_txt = "select * from student";
-            ResultSet rs = statement.executeQuery(sql_txt);
+        try {
+            String sql_txt = "select * from students";
+            Connector_sd connsd = Connector_sd.getInstance();
+            ResultSet rs = connsd.query(sql_txt);
             while (rs.next()){
-                int id = rs.getInt("idsd");
-                String name = rs.getString("namesd");
-                String email = rs.getString("email");
-                String tel = rs.getString("tel");
-                Student s = new Student(id,name,email,tel);
-                lt.add(s);
+                int idsd = rs.getInt("Idsd");
+
             }
+        }
+/*
+        try {
+            String sql_txt = "select * from books";
+            Connector conn = Connector.getInstance();
+            ResultSet rs = conn.query(sql_txt);
+            while (rs.next()){
+                int id = rs.getInt("id");
+                String name = rs.getString("name");
+                String author = rs.getString("author");
+                int qty = rs.getInt("qty");
+                Book b = new Book(id,name,author,qty);
+                ls.add(b);
+            }
+
         }catch (Exception e){
             System.out.println(e.getMessage());
         }finally {
-            tbStudents.setItems(lt);
+            tbBooks.setItems(ls);
         }
+ */
+    }
+
+    public void createNewStudent(ActionEvent actionEvent) throws Exception{
+        Parent listStuden = FXMLLoader.load(getClass().getResource("../create_sd/create_sd.fxml"));
+        Main.rootStage.setTitle("Students");
+        Main.rootStage.setScene(new Scene(listStuden,800,600));
     }
 }
