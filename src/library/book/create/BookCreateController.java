@@ -6,6 +6,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import library.Main;
+import library.dao.impls.BookRepository;
+import library.entities.Book;
 import library.helper.Connector;
 
 import java.sql.PreparedStatement;
@@ -21,23 +23,14 @@ public class BookCreateController {
         try {
             String name = txtName.getText();
             String author = txtAuthor.getText();
-            int qty = Integer.parseInt(txtQty.getText());
-            String sql_txt = "insert into books(name,author,qty) values(?,?,?)";
-            Connector conn = Connector.getInstance();
-            ArrayList arr = new ArrayList();
-            arr.add(name);
-            arr.add(author);
-            arr.add(qty);
-            if (conn.execute(sql_txt, arr)){
+            Integer qty = Integer.parseInt(txtQty.getText());
+            Book book = new Book(null,name,author,qty);
+            BookRepository rp = new BookRepository();
+            if (rp.create(book)){
                 backToList();
             }else{
                 System.out.println("Error");
             }
-
-//            String sql_txt2 = "select * from books where id = ?";
-//            ArrayList pr = new ArrayList();
-//            pr.add(1);
-//            ResultSet bookwithid1 = conn.executeQuery(sql_txt2,pr);
         }catch (Exception e){
             System.out.println(e.getMessage());
         }
