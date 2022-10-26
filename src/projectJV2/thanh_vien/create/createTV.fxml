@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane fx:controller="projectJV2.thanh_vien.create.CreateTVController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text fill="#ee0e0e" layoutX="204.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thêm Thành Viên">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <TextField layoutX="176.0" layoutY="141.0" prefHeight="31.0" prefWidth="288.0" />
+      <TextField layoutX="176.0" layoutY="210.0" prefHeight="31.0" prefWidth="288.0" />
+      <Text layoutX="33.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tên Thành Viên " />
+      <Text layoutX="62.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Số Tiền" />
+      <Button onAction="#backListTV" layoutX="22.0" layoutY="58.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="57.0" text="Back" />
+      <Button layoutX="271.0" layoutY="285.0" mnemonicParsing="false" text="Thêm" />
+   </children>
+</Pane>

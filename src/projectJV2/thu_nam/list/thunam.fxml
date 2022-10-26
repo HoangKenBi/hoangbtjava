@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane fx:controller="projectJV2.thu_nam.list.ThuNamController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text fill="#eb0d0d" layoutX="249.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thu Năm">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <TableView layoutX="9.0" layoutY="90.0" prefHeight="296.0" prefWidth="582.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="C1" />
+          <TableColumn prefWidth="75.0" text="C2" />
+        </columns>
+      </TableView>
+      <Button onAction="#backToHome3" layoutX="14.0" layoutY="50.0" mnemonicParsing="false" text="Back" />
+      <Button onAction="#addThuThang" layoutX="535.0" layoutY="50.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="51.0" text="Add" />
+   </children>
+</Pane>
