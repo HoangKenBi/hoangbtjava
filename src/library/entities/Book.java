@@ -22,8 +22,8 @@ public class Book {
         this.name = name;
         this.author = author;
         this.qty = qty;
-        this.edit= new Button("Edit");
-        this.edit.setOnAction((event) -> {
+        //this.edit= new Button("Edit");
+        //this.edit.setOnAction((event) -> {
             try {
                 BookEditController.editedBook = this;
                 Parent edit = FXMLLoader.load(getClass().getResource("../book/edit/edit.fxml"));
@@ -31,8 +31,10 @@ public class Book {
             }catch (Exception e){
 
             }
-        });
+        //});
     }
+
+
 
     public Button getEdit() {
         return edit;

@@ -36,7 +36,7 @@ public class HomeController {
 
     public void goToThanhVien(ActionEvent actionEvent) throws Exception{
         Parent listChi = FXMLLoader.load(getClass().getResource("thanh_vien/list/thanhvien.fxml"));
-        Main.rootStage.setTitle("Thành Viên");
+        Main.rootStage.setTitle("member");
         Main.rootStage.setScene(new Scene(listChi,800,600));
     }
 

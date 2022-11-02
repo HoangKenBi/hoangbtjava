@@ -15,13 +15,6 @@ public class HomeController {
         Main.rootStage.setScene(new Scene(listBook,800,600));
     }
 
-/*    public void goToStudentList(ActionEvent actionEvent) throws IOException {
-        Parent listStudent = FXMLLoader.load(getClass().getResource("student/list/list.fxml"));
-        Main.rootStage.setTitle("Students");
-        Main.rootStage.setScene(new Scene(listStudent,800,600));
-    }
-
- */
 
     public void goToRents(ActionEvent actionEvent) throws Exception{
         Parent listBook = FXMLLoader.load(getClass().getResource("bookrent/create/create.fxml"));

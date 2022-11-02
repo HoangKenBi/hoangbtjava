@@ -5,21 +5,22 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
-<Pane fx:controller="projectJV2.thanh_vien.list.ThanhViencontroller" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projectJV2.thanh_vien.list.ThanhViencontroller">
    <children>
       <Text fill="#dd0f0f" layoutX="238.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thành Viên">
          <font>
             <Font size="25.0" />
          </font>
       </Text>
-      <TableView layoutX="4.0" layoutY="80.0" prefHeight="314.0" prefWidth="590.0">
+      <TableView fx:id="tbThanhVien" layoutX="4.0" layoutY="80.0" prefHeight="314.0" prefWidth="590.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="C1" />
-          <TableColumn prefWidth="75.0" text="C2" />
+            <TableColumn fx:id="tdId" prefWidth="54.0" text="Id" />
+            <TableColumn fx:id="tdRole" prefWidth="280.0" text="Role" />
+            <TableColumn fx:id="tdSalary" minWidth="0.0" prefWidth="189.0" text="Salary" />
+            <TableColumn fx:id="txtEdit" minWidth="0.0" prefWidth="64.0" text="Action" />
         </columns>
       </TableView>
-      <Button onAction="#backToHome4" layoutX="14.0" layoutY="40.0" mnemonicParsing="false" text="Back"/>
-      <Button onAction="#addTV" layoutX="535.0" layoutY="40.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="51.0" text="Add" />
+      <Button layoutX="14.0" layoutY="40.0" mnemonicParsing="false" onAction="#backToHome4" text="Back" />
+      <Button layoutX="535.0" layoutY="40.0" mnemonicParsing="false" onAction="#addTV" prefHeight="31.0" prefWidth="51.0" text="Add" />
    </children>
 </Pane>

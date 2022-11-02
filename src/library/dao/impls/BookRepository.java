@@ -52,7 +52,7 @@ public class BookRepository implements IRepository<Book> {
         try {
             String sql_txt = "update books set name=?, author=?,qty=? where id=?";
             Connector conn = Connector.getInstance();
-            ArrayList arr = new ArrayList();
+            ArrayList arr = new ArrayList<>();
             arr.add(book.getName());
             arr.add(book.getAuthor());
             arr.add(book.getQty());
@@ -72,7 +72,7 @@ public class BookRepository implements IRepository<Book> {
         try {
             String sql_txt = "delete from books where id=?";
             Connector conn = Connector.getInstance();
-            ArrayList arr = new ArrayList();
+            ArrayList arr = new ArrayList<>();
             arr.add(book.getName());
             arr.add(book.getAuthor());
             arr.add(book.getQty());
@@ -89,7 +89,7 @@ public class BookRepository implements IRepository<Book> {
         try {
             String sql_txt = "select * from books where id=?";
             Connector conn = Connector.getInstance();
-            ArrayList arr = new ArrayList();
+            ArrayList arr = new ArrayList<>();
             arr.add(id);
             ResultSet rs = conn.executeQuery(sql_txt, arr);
             while (rs.next()) {
