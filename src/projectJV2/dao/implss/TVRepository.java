@@ -38,7 +38,6 @@ public class TVRepository implements TRepository<ThanhVien> {
             arr.add(thanhVien.getRole());
             arr.add(thanhVien.getSalary());
 
-
             if (conn.execute(sql_txt, arr)){
                 return true;
             }
@@ -71,8 +70,7 @@ public class TVRepository implements TRepository<ThanhVien> {
             String sql_txt = "delete from member where id = ?";
             Connector conn = Connector.getInstance();
             ArrayList arr = new ArrayList();
-            arr.add(thanhVien.getRole());
-            arr.add(thanhVien.getSalary());
+            arr.add(thanhVien.getId());
             if (conn.execute(sql_txt, arr)){
                 return true;
             }

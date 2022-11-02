@@ -33,8 +33,6 @@ public class TVEditController implements Initializable {
 
     public void submit(ActionEvent actionEvent) {
         try {
-            System.out.println(txtSalary.getText());
-            System.out.println(txtRole.getText());
             String role = txtRole.getText();
             Integer salary = Integer.parseInt(txtSalary.getText());
             editedTV.setRole(role);
@@ -44,7 +42,7 @@ public class TVEditController implements Initializable {
             if (rp.update(editedTV)){
                 backList(null);
             }else{
-                System.out.println("Errorrrr");
+                System.out.println("Error");
             }
         }catch (Exception e){
             System.out.println(e.getMessage());
@@ -76,3 +74,24 @@ public class TVEditController implements Initializable {
         }
     }
 }
+/*
+public void delete(ActionEvent event) {
+        try{
+            Alert alert= new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Delete Book?");
+            alert.setHeaderText("Are you sure delete book: "+editedBook.getName());
+            Optional<ButtonType> option = alert.showAndWait();
+
+            if(option.get() == ButtonType.OK){
+                BookRepository rp = new BookRepository();
+                if(rp.delete(editedBook)){
+                    backToList(null);
+                }else {
+                    System.out.println("Error");
+                }
+            }
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+    }
+ */
