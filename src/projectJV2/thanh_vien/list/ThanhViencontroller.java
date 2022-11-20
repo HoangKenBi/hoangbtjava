@@ -14,6 +14,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.text.Text;
 import projectJV2.Main;
 import projectJV2.dao.impls.TVRepository;
+import projectJV2.dao.impls.chiThangRepository;
 import projectJV2.entities.ThanhVien;
 import projectJV2.entities.chiThang;
 
@@ -42,7 +43,7 @@ public class ThanhVienController implements Initializable {
         TVRepository rp = new TVRepository();
         ls.addAll(rp.all());
         tbThanhVien.setItems(ls);
-        txtTongThu.setText(String.valueOf(sum()));
+        txtTongThu.setText(String.valueOf(hienthitong()));
 
     }
 
@@ -65,6 +66,11 @@ public class ThanhVienController implements Initializable {
             sum = sum + t.getSalary();
         }
         return sum;
+    }
+    public int hienthitong(){
+        TVRepository rp = new TVRepository();
+        int t=rp.tongthu();
+        return t;
     }
 
 

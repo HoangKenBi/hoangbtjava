@@ -49,7 +49,7 @@ public class chiThangController implements Initializable {
         chiThangRepository rp = (chiThangRepository) RepositoryFactory.createRepository(RepoType.CHITHANG);
         ls.addAll(rp.all());
         tbChiThang.setItems(ls);
-        txtTongChi.setText(String.valueOf(sum()));
+        txtTongChi.setText(String.valueOf(hienthitong()));
     }
 
     public void backToHome2(ActionEvent actionEvent) throws Exception{
@@ -69,5 +69,10 @@ public class chiThangController implements Initializable {
             sum = sum +c.getSpending();
         }
         return sum;
+    }
+    public int hienthitong(){
+        chiThangRepository rp = new chiThangRepository();
+        int t=rp.tongchi();
+        return t;
     }
 }

@@ -19,7 +19,7 @@ public class HomeController {
     public void goToChiThang(ActionEvent actionEvent) throws Exception{
         Parent listChi = FXMLLoader.load(getClass().getResource("chi_thang/list/chithang.fxml"));
         Main.rootStage.setTitle("Chi Tháng");
-        Main.rootStage.setScene(new Scene(listChi,800,600));
+        Main.rootStage.setScene(new Scene(listChi,900,600));
     }
 
 
