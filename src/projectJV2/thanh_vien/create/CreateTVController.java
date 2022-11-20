@@ -7,7 +7,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import projectJV2.Main;
-import projectJV2.dao.implss.TVRepository;
+import projectJV2.dao.impls.TVRepository;
 import projectJV2.entities.ThanhVien;
 
 public class CreateTVController {

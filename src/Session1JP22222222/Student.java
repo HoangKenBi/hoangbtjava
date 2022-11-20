@@ -1,4 +1,4 @@
-package Session1JP2;
+package Session1JP22222222;
 
 public class Student {
     private String name;

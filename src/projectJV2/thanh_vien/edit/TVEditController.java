@@ -10,7 +10,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextField;
 import projectJV2.Main;
-import projectJV2.dao.implss.TVRepository;
+import projectJV2.dao.impls.TVRepository;
 import projectJV2.entities.ThanhVien;
 
 import java.net.URL;
@@ -63,11 +63,11 @@ public class TVEditController implements Initializable {
             Optional<ButtonType> optional = alert.showAndWait();
             if (optional.get() == ButtonType.OK){
                 TVRepository rp = new TVRepository();
-                    if (rp.delete(editedTV)){
-                        backList(null);
-                    }else{
-                        System.out.println("Error");
-                    }
+                if (rp.delete(editedTV)){
+                    backList(null);
+                }else{
+                    System.out.println("Error");
+                }
             }
         }catch (Exception e){
             System.out.println(e.getMessage());

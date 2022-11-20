@@ -11,20 +11,25 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.text.Text;
 import projectJV2.Main;
-import projectJV2.dao.implss.TVRepository;
+import projectJV2.dao.impls.TVRepository;
 import projectJV2.entities.ThanhVien;
+import projectJV2.entities.chiThang;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class ThanhViencontroller implements Initializable {
+public class ThanhVienController implements Initializable {
 
     public TableView<ThanhVien> tbThanhVien;
     public TableColumn<ThanhVien, Integer> tdId;
     public TableColumn<ThanhVien, String> tdRole;
     public TableColumn<ThanhVien, Integer> tdSalary;
     public TableColumn<ThanhVien, Button> txtEdit;
+    public Text txtTongThu;
+
+    ObservableList<ThanhVien> ls = FXCollections.observableArrayList();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -33,10 +38,12 @@ public class ThanhViencontroller implements Initializable {
         tdSalary.setCellValueFactory(new PropertyValueFactory<ThanhVien, Integer>("salary"));
         txtEdit.setCellValueFactory(new PropertyValueFactory<ThanhVien, Button>("edit"));
 
-        ObservableList<ThanhVien> ls = FXCollections.observableArrayList();
+        //ObservableList<ThanhVien> ls = FXCollections.observableArrayList();
         TVRepository rp = new TVRepository();
         ls.addAll(rp.all());
         tbThanhVien.setItems(ls);
+        txtTongThu.setText(String.valueOf(sum()));
+
     }
 
     public void backToHome4(ActionEvent actionEvent) throws Exception{
@@ -52,6 +59,13 @@ public class ThanhViencontroller implements Initializable {
         Main.rootStage.setScene(new Scene(listChi,800,600));
     }
 
+    public int sum(){
+        int sum = 0;
+        for(ThanhVien t : ls){
+            sum = sum + t.getSalary();
+        }
+        return sum;
+    }
 
 
 
